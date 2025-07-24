@@ -90,16 +90,6 @@ section>p{
     main{
         grid-template-columns: 1fr 1fr;
     }
-    h1{
-        font-size: 2rem;
-    }
-    h1>strong{
-        font-size: 2.1rem;
-    }
-    header>p{
-        width: 25rem;
-        font-size: 0.9rem;
-    }
 }
 @media (min-width: 901px){
     main{
@@ -120,5 +110,14 @@ section>p{
         grid-column: 3 / 4;
         grid-row: 1 / 3;
     }
-   
+    h1{
+        font-size: 2rem;
+    }
+    h1>strong{
+        font-size: 2.1rem;
+    }
+    header>p{
+        width: 25rem;
+        font-size: 0.9rem;
+    }
 }
