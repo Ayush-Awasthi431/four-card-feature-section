@@ -1,0 +1,124 @@
+:root{
+    --body-color: hsl(180, 38%, 94%);
+    --section-color: white;
+    --heading-color: hsl(234, 12%, 34%);
+    --supervisor-color: hsl(180, 62%, 55%);
+    --supervisor-shadow: hsla(180, 62%, 55%, 0.2);
+    --team-builder-color: hsl(0, 78%, 62%);
+    --team-builder-shadow-color: hsla(0, 78%, 62%,0.2);
+    --karma-color: hsl(34, 97%, 64%);
+    --karma-shadow-color: hsla(34, 97%, 64%,0.2);
+    --calculator-color: hsl(212, 86%, 64%);
+    --calculator-shadow-color: hsla(212, 86%, 64%,0.2);
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--body-color);
+}
+header{
+    margin-top: 1rem;
+}
+main{
+    display: grid;
+    margin-top: 2rem;
+    margin-bottom: auto;
+    grid-template-columns: 1fr;
+    place-items: center;
+    gap: 1rem;
+}
+section{
+    background-color: var(--section-color);
+    padding: 1rem;
+    width: 100%;
+    max-width: 17rem;
+    border-radius: 0.5rem;
+}
+section:hover{
+    transform: scale(1.1);
+}
+figure{
+    text-align: right;
+    margin: 0;
+}
+h1{
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: normal;
+    color: var(--heading-color);
+}
+h1>strong{
+    color: black;
+    font-size: 1.35rem;
+}
+header>p{
+    font-size: 0.8rem;
+    width: 100%;
+    max-width: 16rem;
+    text-align: center;
+}
+h2{
+    font-size: 1.1rem;
+    margin-top: 0;
+}
+section>p{
+    font-size: 0.7rem;
+}
+.supervisor{
+    border-top: 0.3rem solid var(--supervisor-color);
+    box-shadow: 0px 4px 6px 4px var(--supervisor-shadow);
+}
+.team-builder{
+    border-top: 0.3rem solid var(--team-builder-color);
+    box-shadow: 0px 4px 8px 4px var(--team-builder-shadow-color);
+}
+.karma{
+    border-top: 0.3rem solid var(--karma-color);
+    box-shadow: 0px 4px 8px 4px var(--karma-shadow-color);
+}
+.calculator{
+    border-top: 0.3rem solid var(--calculator-color);
+    box-shadow: 0px 4px 8px 4px var(--calculator-shadow-color);
+}
+@media (min-width: 600px) and (max-width: 900px){
+    main{
+        grid-template-columns: 1fr 1fr;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    h1>strong{
+        font-size: 2.1rem;
+    }
+    header>p{
+        width: 25rem;
+        font-size: 0.9rem;
+    }
+}
+@media (min-width: 901px){
+    main{
+        grid-template-columns: repeat(3,1fr);
+        gap: 3rem;
+    }
+    .supervisor{
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+    }
+    .team-builder{
+        grid-column: 2 / 3;
+    }
+    .karma{
+        grid-column: 2 / 3;
+    }
+    .calculator{
+        grid-column: 3 / 4;
+        grid-row: 1 / 3;
+    }
+   
+}
